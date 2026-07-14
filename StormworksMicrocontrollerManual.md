@@ -1,27 +1,42 @@
 # Stormworks マイコン仕様
 更新日 : 2026-07-14
 ## 目次
+- [パーツ一覧](#パーツ一覧)
+    - [Blocks](#blocks)
+    - [Vehicle Control](#vehicle-control)
+    - [Mechanics](#mechanics)
+    - [Propulsion](#propulsion)
+    - [Specialist Equipment](#specialist-equipment)
+    - [Logic](#logic)
+    - [Displays](#displays)
+    - [Sensors](#sensors)
+    - [Fluid](#fluid)
+    - [Electric](#electric)
+    - [Jet Engines](#jet-engines)
+    - [Weapons](#weapons)
+    - [Modular Engines](#modular-engines)
+    - [Industry](#industry)
 - [マイコンの概要](#マイコンの概要)
     - [プロパティ](#プロパティ)
     - [ロジック](#ロジック)
     - [シンボル](#シンボル)
-- [部品一覧](#部品一覧)
+- [ノード一覧](#ノード一覧)
     - [インターフェース](#インターフェース)
-    - [オンオフ](#オンオフ)
-    - [数値](#数値)
-    - [制御](#制御)
-    - [複合信号](#複合信号)
-    - [プロパティ](#プロパティ)
+    - [LOGICAL](#logical)
+    - [ARITHMETIC](#arithmetic)
+    - [CONTROL](#control)
+    - [COMPOSITE](#composite)
+    - [PROPERTY](#property)
 - [Lua Script ノードの詳細](#lua-script-ノードの詳細)
     - [概要](#概要)
     - [文](#文)
-    - [関数](#関数)
     - [nil 型](#nil-型)
     - [bool 型](#bool-型)
     - [number 型](#number-型)
     - [string 型](#string-型)
     - [function 型](#function-型)
     - [table 型](#table-型)
+    - [関数](#関数)
     - [描画関数](#描画関数)
     - [小技](#小技)
 - [基本動作](#基本動作)
@@ -39,6 +54,30 @@
 <br>プレイヤーが座席に座っている間各種操作を受け付ける。`Trigger`、`Hotkey 1~6` には 名前と Toggle/Push、`Axis 1~4` には名前と感度、キーを離したら値を維持/リセット、トリムが設定できる。`Seat data` は `Hotkey 1~6` が bool ch1~6、`Trigger` は bool ch31、`Occupied` は bool ch32、`Axis 1~4` は number ch1~4、`Look X` は number ch9、`Look Y` は number ch10 となっている。基本的な入出力は上記の通りだが例外が存在する。
 - Gyro : <code>**入力** <span style="color:red">🔴Hover mode</span>、<span style="color:green">🟢Roll</span>、<span style="color:green">🟢Pitch</span>、<span style="color:green">🟢Yaw</span>、<span style="color:green">🟢UP/DOWN</span></code> 、<code>**出力** <span style="color:green">🟢Stabilised Roll</span>、<span style="color:green">🟢Stabilised Pitch</span>、<span style="color:green">🟢Stabilised Yaw</span>、<span style="color:green">🟢Stabilised UP/DOWN</span></code>
 <br>ジャイロ。説明が思いつかない。
+
+### Mechanics
+
+### Propulsion
+
+### Specialist Equipment
+
+### Logic
+
+### Displays
+
+### Sensors
+
+### Fluid
+
+### Electric
+
+### Jet Engines
+
+### Weapons
+
+### Modular Engines
+
+### Industry
 
 ## マイコンの概要
 ### プロパティ
