@@ -467,11 +467,18 @@
     - `map.mapToScreen(gps_x, gps_y, zoom, screen_h, screen_w, world_x, world_y)` : 地図上の座標 (world_x, world_y) が画面上のどの座標に対応するかを返す。前3個の引数は `screen.drawMap` と同じ値を渡す必要がある。
     </div></details>
 
+    #### 補足
+    1 ピクセルだけ描画する関数がないため、`screen.drawLine(x, y, x+1, y+1)` のようにして描画する必要がある。頻繁に使用する場合は、以下のように関数を定義しておくと便利である。
+    ```lua
+    function screen.drawPixel(x, y)
+        screen.drawLine(x, y, x+1, y+1)
+    end
+    ```
+
 ### 小技
 - 三項演算子は存在しないが、`x = a and b or c` とすることで、a が true のとき b を、そうでないとき c を x に代入することができる。ただし、b が false または nil の場合は、a が true でも c が代入されてしまうことに注意する必要がある。
 
 ## 基本動作
 - マイコンの基礎遅延は 1 tick (1/60 秒) 。1 ノード につき 1 tick の遅延が追加される。
-- 入出力は 1 マスにつき 1 ノードを設定可能だが、カテゴリの違うノードは入出力問わず重ねて設置できる。🔴<span style="color:red">オンオフ</span> ・ 🟢<span style="color:limegreen">数値</span>がカテゴリ 1 、🟣<span style="color:magenta">複合信号</span>が 2 、🔵<span style="color:cyan">映像</span>が 3 、🟡<span style="color:orange">音声</span>が 4 。
-<br>同じカテゴリで入力と出力を重ねることはできない。
+- 入出力は 1 マスにつき 1 ノードを設定可能だが、カテゴリの違うノードは入出力問わず重ねて設置できる。<code>🔴<span style="color:red">オンオフ</span>・🟢<span style="color:limegreen">数値</span></code>、<code>🟣<span style="color:magenta">複合信号</span></code>、<code>🔵<span style="color:cyan">映像</span></code>、<code>🟡<span style="color:orange">音声</span></code>はそれぞれ異なるカテゴリである。同じカテゴリで入力と出力を重ねることはできない。
 - 各ノードの出力配線は無限に設定できる。一方入力配線は入力可能な個数が決まっている。
