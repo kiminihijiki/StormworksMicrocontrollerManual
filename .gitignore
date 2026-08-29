@@ -1,0 +1,6 @@
+# Local Python bytecode/cache created by the catalog tools.
+__pycache__/
+*.py[cod]
+
+# Keep generated editor/runtime scratch files out of the repository.
+.pytest_cache/

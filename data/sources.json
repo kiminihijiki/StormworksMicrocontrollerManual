@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "1",
+  "description": "Pinned source revisions for the Stormworks AI reference entry point.",
+  "sources": [
+    {
+      "id": "storm-microcontroller-language",
+      "url": "https://github.com/nona-takahara/storm-microcontroller-language",
+      "revision": "0c0794a9e24dc1a5bf9abea486b0addee8896a8e",
+      "role": "DSL, gate definitions, XML conversion, and wiring validation"
+    },
+    {
+      "id": "stormworks-partdata",
+      "url": "https://github.com/kiminihijiki/stormworks-partdata",
+      "revision": "0075814fded75b08c59cf36dc852ca002afdbc8c",
+      "role": "Indexed part catalog, sensors, logic nodes, and query tools"
+    },
+    {
+      "id": "stormworks-microcontroller-lua",
+      "url": "https://github.com/kiminihijiki/stormworks-microcontroller-lua",
+      "revision": "a030727984130931246c2f58a8a7502d1337095e",
+      "role": "Stormworks microcontroller Lua runtime and API supplement"
+    }
+  ]
+}
